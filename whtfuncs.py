@@ -39,7 +39,7 @@ def msg_with_image_loop(clients, processedClients, imagePath, professor):
     while True:
         for client in clients:
             if (client['phone'], client['course']) not in processedClients:
-                message = f"Hello {client['name']} Congratulations on purchasing the course: {client['course']}\n Check out more courses from {professor} at 4selet.com/professorjoao"
+                message = f"Hello {client['name']} Congratulations on purchasing the course: {client['course']}\n Check out more courses from {professor}."
 
                 try:
                     whatkit.sendwhats_image(client['phone'], imagePath, message, wait_time=18, tab_close=True, close_time=2)
